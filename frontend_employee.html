@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Employee Manger</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1> Employee Management System </h1>
+            <form id="employeeForm"><!--collect user input to trigger post API-->
+                <input type="text"  id="name" placeholder="Full Name" required></input>
+                <input type="email"  id="email" placeholder="Email" required></input>
+                <input type="text" id="department" placeholder="Department" required></input>
+                <input type="number" id="salary" placeholder="Salary" required></input>
+                <input type="hidden" id="employeeId"></input><!--for update -->
+                <button type="submit" >Add Employee</button>
+                <!-- once js is connected on submitting it will trigger the FastAPI POST  request To add new employee-->
+            </form>
+            <h2>Employee List</h2><!--Display employee data from get API-->
+            <table id="employeeTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!--JavaScript will populate this -->
+                <!--Javascript will dynamically insert rows here after calling GET API from Fast API Backend -->
+                </tbody>
+            </table>
+        </div>
+         <!-- JS to be added later-->
+             <script src="app.js"></script>
+             <!--Loads javascript that will connect with backend -->
+    </body>
+</html>
